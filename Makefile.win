@@ -1,0 +1,124 @@
+# Project: 剧院票务管理系统
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = src/View/main.o src/Common/common.o src/Common/listTestDrv.o src/Persistence/Account_Persist.o src/Persistence/EntityKey_Persist.o src/Persistence/Play_Persist.o src/Persistence/Query_Persist.o src/Persistence/Sale_Persist.o src/Persistence/SalesAnalysis_Persist.o src/Persistence/Schedule_Persist.o src/Persistence/Seat_Persist.o src/Persistence/Studio_Persist.o src/Persistence/Ticket_Persist.o src/Service/Account.o src/Service/EntityKey.o src/Service/Play.o src/Service/Sale.o src/Service/SalesAnalysis.o src/Service/Schedule.o src/Service/Seat.o src/Service/Studio.o src/Service/Ticket.o src/View/Account_UI.o src/View/Main_Menu.o src/View/Play_UI.o src/View/Queries_Menu.o src/View/Query_Play_UI.o src/View/Sale_UI.o src/View/SalesAnalysis_UI.o src/View/Schedule_UI.o src/View/Seat_UI.o src/View/Studio_UI.o src/View/Ticket_UI.o
+LINKOBJ  = src/View/main.o src/Common/common.o src/Common/listTestDrv.o src/Persistence/Account_Persist.o src/Persistence/EntityKey_Persist.o src/Persistence/Play_Persist.o src/Persistence/Query_Persist.o src/Persistence/Sale_Persist.o src/Persistence/SalesAnalysis_Persist.o src/Persistence/Schedule_Persist.o src/Persistence/Seat_Persist.o src/Persistence/Studio_Persist.o src/Persistence/Ticket_Persist.o src/Service/Account.o src/Service/EntityKey.o src/Service/Play.o src/Service/Sale.o src/Service/SalesAnalysis.o src/Service/Schedule.o src/Service/Seat.o src/Service/Studio.o src/Service/Ticket.o src/View/Account_UI.o src/View/Main_Menu.o src/View/Play_UI.o src/View/Queries_Menu.o src/View/Query_Play_UI.o src/View/Sale_UI.o src/View/SalesAnalysis_UI.o src/View/Schedule_UI.o src/View/Seat_UI.o src/View/Studio_UI.o src/View/Ticket_UI.o
+LIBS     = -L"F:/Dev-Cpp/MinGW64/lib" -L"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"F:/Dev-Cpp/MinGW64/include" -I"F:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"F:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 剧院票务管理系统~.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+src/View/main.o: src/View/main.c
+	$(CC) -c src/View/main.c -o src/View/main.o $(CFLAGS)
+
+src/Common/common.o: src/Common/common.c
+	$(CC) -c src/Common/common.c -o src/Common/common.o $(CFLAGS)
+
+src/Common/listTestDrv.o: src/Common/listTestDrv.c
+	$(CC) -c src/Common/listTestDrv.c -o src/Common/listTestDrv.o $(CFLAGS)
+
+src/Persistence/Account_Persist.o: src/Persistence/Account_Persist.c
+	$(CC) -c src/Persistence/Account_Persist.c -o src/Persistence/Account_Persist.o $(CFLAGS)
+
+src/Persistence/EntityKey_Persist.o: src/Persistence/EntityKey_Persist.c
+	$(CC) -c src/Persistence/EntityKey_Persist.c -o src/Persistence/EntityKey_Persist.o $(CFLAGS)
+
+src/Persistence/Play_Persist.o: src/Persistence/Play_Persist.c
+	$(CC) -c src/Persistence/Play_Persist.c -o src/Persistence/Play_Persist.o $(CFLAGS)
+
+src/Persistence/Query_Persist.o: src/Persistence/Query_Persist.c
+	$(CC) -c src/Persistence/Query_Persist.c -o src/Persistence/Query_Persist.o $(CFLAGS)
+
+src/Persistence/Sale_Persist.o: src/Persistence/Sale_Persist.c
+	$(CC) -c src/Persistence/Sale_Persist.c -o src/Persistence/Sale_Persist.o $(CFLAGS)
+
+src/Persistence/SalesAnalysis_Persist.o: src/Persistence/SalesAnalysis_Persist.c
+	$(CC) -c src/Persistence/SalesAnalysis_Persist.c -o src/Persistence/SalesAnalysis_Persist.o $(CFLAGS)
+
+src/Persistence/Schedule_Persist.o: src/Persistence/Schedule_Persist.c
+	$(CC) -c src/Persistence/Schedule_Persist.c -o src/Persistence/Schedule_Persist.o $(CFLAGS)
+
+src/Persistence/Seat_Persist.o: src/Persistence/Seat_Persist.c
+	$(CC) -c src/Persistence/Seat_Persist.c -o src/Persistence/Seat_Persist.o $(CFLAGS)
+
+src/Persistence/Studio_Persist.o: src/Persistence/Studio_Persist.c
+	$(CC) -c src/Persistence/Studio_Persist.c -o src/Persistence/Studio_Persist.o $(CFLAGS)
+
+src/Persistence/Ticket_Persist.o: src/Persistence/Ticket_Persist.c
+	$(CC) -c src/Persistence/Ticket_Persist.c -o src/Persistence/Ticket_Persist.o $(CFLAGS)
+
+src/Service/Account.o: src/Service/Account.c
+	$(CC) -c src/Service/Account.c -o src/Service/Account.o $(CFLAGS)
+
+src/Service/EntityKey.o: src/Service/EntityKey.c
+	$(CC) -c src/Service/EntityKey.c -o src/Service/EntityKey.o $(CFLAGS)
+
+src/Service/Play.o: src/Service/Play.c
+	$(CC) -c src/Service/Play.c -o src/Service/Play.o $(CFLAGS)
+
+src/Service/Sale.o: src/Service/Sale.c
+	$(CC) -c src/Service/Sale.c -o src/Service/Sale.o $(CFLAGS)
+
+src/Service/SalesAnalysis.o: src/Service/SalesAnalysis.c
+	$(CC) -c src/Service/SalesAnalysis.c -o src/Service/SalesAnalysis.o $(CFLAGS)
+
+src/Service/Schedule.o: src/Service/Schedule.c
+	$(CC) -c src/Service/Schedule.c -o src/Service/Schedule.o $(CFLAGS)
+
+src/Service/Seat.o: src/Service/Seat.c
+	$(CC) -c src/Service/Seat.c -o src/Service/Seat.o $(CFLAGS)
+
+src/Service/Studio.o: src/Service/Studio.c
+	$(CC) -c src/Service/Studio.c -o src/Service/Studio.o $(CFLAGS)
+
+src/Service/Ticket.o: src/Service/Ticket.c
+	$(CC) -c src/Service/Ticket.c -o src/Service/Ticket.o $(CFLAGS)
+
+src/View/Account_UI.o: src/View/Account_UI.c
+	$(CC) -c src/View/Account_UI.c -o src/View/Account_UI.o $(CFLAGS)
+
+src/View/Main_Menu.o: src/View/Main_Menu.c
+	$(CC) -c src/View/Main_Menu.c -o src/View/Main_Menu.o $(CFLAGS)
+
+src/View/Play_UI.o: src/View/Play_UI.c
+	$(CC) -c src/View/Play_UI.c -o src/View/Play_UI.o $(CFLAGS)
+
+src/View/Queries_Menu.o: src/View/Queries_Menu.c
+	$(CC) -c src/View/Queries_Menu.c -o src/View/Queries_Menu.o $(CFLAGS)
+
+src/View/Query_Play_UI.o: src/View/Query_Play_UI.c
+	$(CC) -c src/View/Query_Play_UI.c -o src/View/Query_Play_UI.o $(CFLAGS)
+
+src/View/Sale_UI.o: src/View/Sale_UI.c
+	$(CC) -c src/View/Sale_UI.c -o src/View/Sale_UI.o $(CFLAGS)
+
+src/View/SalesAnalysis_UI.o: src/View/SalesAnalysis_UI.c
+	$(CC) -c src/View/SalesAnalysis_UI.c -o src/View/SalesAnalysis_UI.o $(CFLAGS)
+
+src/View/Schedule_UI.o: src/View/Schedule_UI.c
+	$(CC) -c src/View/Schedule_UI.c -o src/View/Schedule_UI.o $(CFLAGS)
+
+src/View/Seat_UI.o: src/View/Seat_UI.c
+	$(CC) -c src/View/Seat_UI.c -o src/View/Seat_UI.o $(CFLAGS)
+
+src/View/Studio_UI.o: src/View/Studio_UI.c
+	$(CC) -c src/View/Studio_UI.c -o src/View/Studio_UI.o $(CFLAGS)
+
+src/View/Ticket_UI.o: src/View/Ticket_UI.c
+	$(CC) -c src/View/Ticket_UI.c -o src/View/Ticket_UI.o $(CFLAGS)
